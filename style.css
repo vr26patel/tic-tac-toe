@@ -1,0 +1,95 @@
+:root{
+    --pink: #f107ca;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Baloo Bhai 2", sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+h1{
+    text-align: center;
+    font-size: 75px;
+    color: var(--pink);
+}
+.board{
+    margin: 0 auto;
+    height: 375px;
+    width: 375px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2%;
+    gap: 13px;
+}
+.turn{
+    font-size: 25px;
+    color: aliceblue;
+    text-align: center;
+}
+.square{
+    width: 120px;
+    height: 120px;
+    background-color: rgb(226, 231, 225);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 1s, height 1s, transform 1s;
+    border-radius: 8%;
+    font-size: 95px;  
+    font-weight: bold;
+    text-align: center;
+    color: black;
+  }
+.square:hover{
+    transform: scale(1.03);
+    border: none;
+    box-shadow: 0px 0px 13px 3px  var(--pink);
+}
+#restartButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s ease-in-out; 
+    height: 45px;
+    width: 155px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 29px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-weight: bold;
+    transition-property: all, height, color;
+}
+#restartButton:hover{
+    background-color:  var(--pink);
+    transition-property: all, height, color;
+    box-shadow: 0px 0px 13px 3px  var(--pink);
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 45px; 
+    }
+    .board {
+        width: 90vw;
+        height: 90vw;
+        gap: 8px;
+    }
+    .square {
+        width: 28vw;
+        height: 28vw;
+        font-size: 60px; 
+    }
+    #restartButton {
+        width: 70vw;
+        font-size: 20px;
+    }
+}
